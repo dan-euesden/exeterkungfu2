@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header, nav, main, footer {
+            display: block;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #666;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 20px;
+        }
+
+        /* Article Styles */
+        article {
+            margin-bottom: 20px;
+        }
+
+        /* Image and Text Layout */
+        .image-description,
+        .text-image {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .image-description img,
+        .text-image img {
+            width: 50%;
+            height: auto;
+            border-radius: 8px; /* Optional: Adds rounded corners to images */
+            margin-right: 20px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .image-description img,
+            .text-image img {
+                width: 100%;
+                margin: 0;
+                margin-bottom: 10px;
+            }
+
+            .image-description,
+            .text-image {
+                flex-direction: column;
+            }
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Your Website Name</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <h2>Main Content</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+        </article>
+
+        <!-- Image and Description Row -->
+        <div class="image-description">
+            <img src="/Users/dan/Websites/exeterkungfu/images/dragon.png" alt="Image 1">
+            <p>Description for Image 1 goes here. This is a sample description text.</p>
+        </div>
+
+        <!-- Text and Image Row -->
+        <div class="text-image">
+            <p>This is a sample text for the second row. It can be a description, explanation, or any relevant content.</p>
+            <img src="/Users/dan/Websites/exeterkungfu/images/crane.png" alt="Image 2">
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
