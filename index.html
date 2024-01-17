@@ -1,147 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exeter Kung Fu: Five Pattern Hung Kuen</title>
     <style>
+      body {
+        font-family: Roboto, Arial, sans-serif;
+        background-color: #000;
+        color: #b18f08dc;
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header,
+      nav,
+      main,
+      footer {
+        display: block;
+      }
+
+      /* Header Styles */
+      header {
+        background-image: url("./images/hanzi-red-transparent.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        color: white;
+        text-align: center;
+        padding: 25px 0;
+        position: relative;
+      }
+
+      header h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        font-size: 18px;
+      }
+
+      .slogan {
+        color: #b18f08dc;
+        padding-top: 20px;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+
+      /* Navigation Styles */
+      nav {
+        background-color: #666;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      nav li {
+        margin: 0 10px;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      /* Main Content Styles */
+      main {
+        padding: 20px;
+      }
+
+      /* Article Styles */
+      article {
+        margin-bottom: 20px;
+      }
+
+      /* Image and Text Layout */
+      .image-description,
+      .text-image {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .image-description img,
+      .text-image img {
+        width: 50%;
+        height: auto;
+        border-radius: 8px; /* Optional: Adds rounded corners to images */
+        margin-right: 20px;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 600px) {
+        .slogan {
+          color: #b18f08dc;
+          padding: 20px;
+          position: relative;
+        }
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+          font-size: 15px;
         }
-
-        header, nav, main, footer {
-            display: block;
-        }
-
-        /* Header Styles */
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-
-        /* Navigation Styles */
-        nav {
-            background-color: #666;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav li {
-            margin: 0 10px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Main Content Styles */
-        main {
-            padding: 20px;
-        }
-
-        /* Article Styles */
-        article {
-            margin-bottom: 20px;
-        }
-
-        /* Image and Text Layout */
-        .image-description,
-        .text-image {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
         .image-description img,
         .text-image img {
-            width: 50%;
-            height: auto;
-            border-radius: 8px; /* Optional: Adds rounded corners to images */
-            margin-right: 20px;
+          width: 100%;
+          margin: 0;
+          margin-bottom: 10px;
         }
 
-        /* Responsive Styles */
-        @media (max-width: 600px) {
-            .image-description img,
-            .text-image img {
-                width: 100%;
-                margin: 0;
-                margin-bottom: 10px;
-            }
-
-            .image-description,
-            .text-image {
-                flex-direction: column;
-            }
+        .image-description,
+        .text-image {
+          flex-direction: column;
         }
+      }
 
-        /* Footer Styles */
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
+      /* Footer Styles */
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
     </style>
-</head>
-<body>
-
-    <header>
-        <h1>Your Website Name</h1>
+  </head>
+  <body>
+    <header id="header">
+      <h1>Exeter Kung Fu</h1>
+      <div class="slogan">
+        <h2>Martial Arts Training and Self-Defense</h2>
+        <h3>
+          Learn Kung Fu in a friendly club environment with classes twice per
+          week
+        </h3>
+      </div>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+      <ul>
+        <li><a href="#header">Home</a></li>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#instructors">Instructors</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#questions">FAQ</a></li>
+      </ul>
     </nav>
 
     <main>
-        <article>
-            <h2>Main Content</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
-        </article>
+      <article id="intro">
+        <p>
+          Prepare to immerse yourself in the living legacy of authentic Kung Fu,
+          a full-contact martial art system handed down through the generations,
+          directly from the late Grandmaster Yuen Yik Kai. Rooted in the ancient
+          traditions of the Sui Lam Monastery, our 5-animal system stands as a
+          testament to the profound history of martial arts.
+        </p>
+        <p>
+          At our Exeter club, we embrace enthusiasts of all backgrounds, from
+          beginners setting out on their martial arts journey to seasoned
+          practitioners looking to refine their skills. Our small, tight-knit
+          community values the essence of rigorous training in a friendly and
+          safe environment, delivering tangible results. Here, dedication paves
+          the way to rapid progress, unlocking your true potential, and
+          realizing capabilities you once only read about.
+        </p>
+        <p>
+          With a history dating back to 1983, the Exeter club has earned a
+          respected reputation within the martial arts world, silently leaving
+          its mark. Join us now to become a part of this enduring legacy in
+          martial arts.
+        </p>
+        <p>
+          <span class="accent">Ready to take the next step?</span> Discover our
+          <a href="#classes">class times</a> and start your martial arts journey
+          today.
+        </p>
+      </article>
 
-        <!-- Image and Description Row -->
-        <div class="image-description">
-            <img src="/Users/dan/Websites/exeterkungfu/images/dragon.png" alt="Image 1">
-            <p>Description for Image 1 goes here. This is a sample description text.</p>
-        </div>
+      <!-- Image and Description Row -->
+      <div class="image-description">
+        <img src="./images/dragon.png" alt="Image 1" />
+        <p>
+          Description for Image 1 goes here. This is a sample description text.
+        </p>
+      </div>
 
-        <!-- Text and Image Row -->
-        <div class="text-image">
-            <p>This is a sample text for the second row. It can be a description, explanation, or any relevant content.</p>
-            <img src="/Users/dan/Websites/exeterkungfu/images/crane.png" alt="Image 2">
-        </div>
-
+      <!-- Text and Image Row -->
+      <div class="text-image">
+        <p>
+          This is a sample text for the second row. It can be a description,
+          explanation, or any relevant content.
+        </p>
+        <img
+          src="/Users/dan/Websites/exeterkungfu/images/crane.png"
+          alt="Image 2"
+        />
+      </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 Your Website. All rights reserved.</p>
+      <p>&copy; 2024 Exeter Kung Fu. All rights reserved.</p>
     </footer>
-
-</body>
+  </body>
 </html>
