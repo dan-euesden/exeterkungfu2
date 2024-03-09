@@ -31,7 +31,6 @@
         color: white;
         text-align: center;
         padding: 25px 0;
-        position: relative;
       }
 
       header h1 {
@@ -54,7 +53,7 @@
 
       /* Navigation Styles */
       nav {
-        background-color: #666;
+        background-color: #000;
         color: #fff;
         padding: 10px;
         text-align: center;
@@ -81,6 +80,21 @@
         font-weight: bold;
       }
 
+      /* Hamburger Menu Icon Styles */
+      .hamburger-icon {
+        display: none;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 1001;
+      }
+
+      /* Content divider */
+      .content-divider {
+        margin-top: 0px;
+      }
+
       /* Main Content Styles */
       main {
         padding: 20px;
@@ -101,14 +115,70 @@
 
       .image-description img,
       .text-image img {
-        width: 50%;
+        width: 20%;
         height: auto;
         border-radius: 8px; /* Optional: Adds rounded corners to images */
         margin-right: 20px;
       }
 
+      .colored-box {
+        display: flex;
+        background-color: #b10000;
+        max-width: 20%;
+        height: auto;
+      }
+
+      /* Text Content styles */
+
+      .content-text {
+        background-color: #000;
+        color: #b18f08dc;
+        padding: 20px;
+        margin-top: 10px;
+        overflow: auto;
+        clear: both;
+      }
+
+      .content-text a {
+        color: #b10000;
+      }
+
+      .content-text h2 {
+        text-decoration: underline;
+        text-decoration-color: #b10000;
+        text-decoration-thickness: 3px;
+      }
+
       /* Responsive Styles */
       @media (max-width: 600px) {
+        nav {
+          position: static;
+          height: auto;
+        }
+        nav ul {
+          display: none;
+          flex-direction: column;
+          background-color: black;
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          width: 100%;
+          text-align: left;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav.active ul {
+          display: flex;
+        }
+
+        nav ul li {
+          margin: 10px;
+          display: block;
+        }
+
+        .hamburger-icon {
+          display: block;
+        }
         .slogan {
           color: #b18f08dc;
           padding: 20px;
@@ -132,7 +202,7 @@
 
       /* Footer Styles */
       footer {
-        background-color: #333;
+        background-color: #000;
         color: #fff;
         padding: 10px;
         text-align: center;
@@ -152,6 +222,8 @@
     </header>
 
     <nav>
+      <div class="hamburger-icon">&#9776;</div>
+
       <ul>
         <li><a href="#header">Home</a></li>
         <li><a href="#classes">Classes</a></li>
@@ -193,12 +265,73 @@
         </p>
       </article>
 
-      <!-- Image and Description Row -->
-      <div class="image-description">
-        <img src="./images/dragon.png" alt="Image 1" />
+      <section id="content-divider" class="content-divider">
+        <picture>
+          <source
+            media="(min-width:697px)"
+            srcset="./images/divider-image.png"
+            sizes="100vw"
+          />
+          <img
+            src="./images/divider-image.png"
+            alt="five animals"
+            width="100%"
+          />
+        </picture>
+      </section>
+
+      <!-- Class times -->
+      <article id="classes" class="content-text">
+        <h2>Class Schedule</h2>
         <p>
-          Description for Image 1 goes here. This is a sample description text.
+          Our class schedule is designed to accommodate martial artists of all
+          levels and backgrounds. Please be aware that class timings and
+          locations can vary.
         </p>
+        <h4>Location</h4>
+        <p>
+          All classes are held on the 1st floor at
+          <a href="https://maps.app.goo.gl/Xa6uEF8XzAuzzd3v8" target="_blank"
+            >Hybrid House, 80 Summerway, Exeter EX4 8DS.</a
+          >
+        </p>
+        <h3>Class Times</h3>
+        <ul>
+          <li>Sunday: 8:30 AM - 10:30 AM</li>
+          <li>Monday: 6:30 PM - 8:30 PM</li>
+        </ul>
+        <p>
+          For the latest updates on any changes or additional classes, check our
+          <a href="https://www.facebook.com/fivepatternkungfu/" target="_blank"
+            >Facebook page</a
+          >.
+        </p>
+        <p>
+          For details on what to bring to classes, please visit our
+          <a href="#questions">FAQ</a>.
+        </p>
+      </article>
+
+      <!-- Image and Description Row -->
+
+      <div class="image-description">
+        <div class="colored-box"></div>
+        <div><img src="./images/dragon.png" alt="dragon" /></div>
+        <div class-"description">
+          <p>
+          In Dragon techniques, the utilization of the tail, horns, and claws is
+          executed with a focus on power and precision. These movements are
+          characterized by sweeping motions, emphasizing the spiritual essence
+          of the animal. Within this discipline, particular attention is given
+          to the incorporation of locks—a strategic facet designed with a
+          specific intent. The applications of these locks are meticulously
+          crafted to exert force in a manner that can result in bone fractures
+          and the incapacitation of joints. This meticulous approach reflects
+          the strategic and powerful nature of Dragon techniques, contributing
+          to the comprehensive and intricate framework of Five Pattern Hung
+          Kuen.
+          </p>
+        </div>
       </div>
 
       <!-- Text and Image Row -->
@@ -213,6 +346,15 @@
         />
       </div>
     </main>
+    <script>
+      // JavaScript to toggle mobile navigation menu
+      document
+        .querySelector(".hamburger-icon")
+        .addEventListener("click", function () {
+          var nav = document.querySelector("nav");
+          nav.classList.toggle("active");
+        });
+    </script>
 
     <footer>
       <p>&copy; 2024 Exeter Kung Fu. All rights reserved.</p>
